@@ -6,7 +6,7 @@ This file was obtained from Kaggle's open source repository. The following link 
 
 ## Tools Used
 To complete the study, the following data analytics tools were utilized:
-1. Excel - For data inport and cleaning
+1. Excel - For data import and cleaning
 2. SQL - For more cleaning and analysis
 3. Power BI - For visualization
 
