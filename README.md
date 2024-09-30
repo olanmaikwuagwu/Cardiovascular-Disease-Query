@@ -30,4 +30,92 @@ Before analyzing the dataset, I checked for duplicates, nulls, and missing value
 16. How is the presence of a heart disease linked to gender and heart rate?
 
 ## Code
---sql
+```sql
+----------------------------------------------------------Data Cleaning--------------------------------------------------------------------
+----------------------------------------------------Look for duplicates--------------------------------------------------------------------
+SELECT 
+age,
+gender,
+chestpain,
+restingBP,
+serumcholesterol,
+fastingbloodsugar,
+restingelectro, 
+maxheartrate,
+exerciseangina,
+oldpeak,
+slope,
+noofmajorvessels,
+target
+ FROM cardio
+ GROUP BY age,
+gender,
+chestpain,
+restingBP,
+serumcholesterol,
+fastingbloodsugar,
+restingelectro, 
+maxheartrate,
+exerciseangina,
+oldpeak,
+slope,
+noofmajorvessels,
+target
+HAVING COUNT(*) > 1;
+
+----------------------------------Look for nulls---------------------------------------------------------------------------------------
+
+SELECT * 
+FROM cardio
+WHERE age IS NULL
+OR gender IS NULL
+OR chestpain IS NULL
+OR restingBP IS NULL
+OR serumcholesterol IS NULL
+OR fastingbloodsugar IS NULL
+OR restingelectro IS NULL
+OR maxheartrate IS NULL
+OR exerciseangina IS NULL
+OR oldpeak IS NULL
+OR slope IS NULL
+OR noofmajorvessels IS NULL
+OR target IS NULL;
+
+---------------------------------------------OR-------------------------------------------------------------------------------------------
+
+SELECT * 
+FROM cardio
+WHERE COALESCE(age, gender, chestpain, restingBP, serumcholesterol, fastingbloodsugar, 
+restingelectro, maxheartrate, exerciseangina, oldpeak, slope, noofmajorvessels, target) IS NULL;
+
+--------------------------Since there are no nulls or duplicates, begin EDA----------------------------------------------------------------
+
+--------------------------------Derive summary statistics----------------------------------------------------------------------------------
+
+SELECT 
+    AVG(restingelectro) AS mean_restingelectro,
+    MAX(restingelectro) AS max_restingelectro,
+    MIN(restingelectro) AS min_restingelectro,
+    STDDEV(restingelectro) AS std_restingelectro,
+    AVG(fastingbloodsugar) AS mean_fastingbloodsugar,
+    MAX(fastingbloodsugar) AS max_fastingbloodsugar,
+    MIN(fastingbloodsugar) AS min_fastingbloodsugar,
+    STDDEV(fastingbloodsugar) AS std_fastingbloodsugar,
+    AVG(chestpain) AS mean_chestpain,
+    MAX(chestpain) AS max_chestpain,
+    MIN(chestpain) AS min_chestpain,
+    STDDEV(chestpain) AS std_chestpain,
+    AVG(restingBP) AS mean_restingBP,
+    MAX(restingBP) AS max_restingBP,
+    MIN(restingBP) AS min_restingBP,
+    STDDEV(restingBP) AS std_restingBP,
+    AVG(serumcholesterol) AS mean_serumcholesterol,
+    MAX(serumcholesterol) AS max_serumcholesterol,
+    MIN(serumcholesterol) AS min_serumcholesterol,
+    STDDEV(serumcholesterol) AS std_serumcholesterol,
+    AVG(noofmajorvessels) AS AVG_noofmajorvessels,
+    MAX(noofmajorvessels) AS MAX_noofmajorvessels,
+    MIN(noofmajorvessels) AS MIN_noofmajorvessels,
+    STDDEV(noofmajorvessels) AS MAX_noofmajorvessels
+FROM cardio;
+```
