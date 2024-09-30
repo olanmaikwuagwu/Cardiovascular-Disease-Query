@@ -13,8 +13,8 @@ To complete the study, the following data analytics tools were utilized:
 ## Methods and Questions
 Before analyzing the dataset, I checked for duplicates, nulls, and missing values. To a large extent, the raw data was clean and ready for querying. After getting the summary statistics, I answered the following questions during the exploratory data analysis:
 1. What age brackets are covered in the analysis?
-2. How many men and women made up the total count? (0 for , 1 for   )
-3. How were chest pain types distributed among the participants? (0, 1, 2, 3)
+2. How many men and women made up the total count? (0 for female, 1 for male)
+3. How were chest pain types distributed among the participants? (0 for typical angina, 1 for atypical angina, 2 for non-anginal pain, 3 for asymptomatic)
 4. What was the average resting blood pressure?
 5. What is the correlation between chestpain and heartrate?
 6. How is serum cholesterol distributed amongst patients?
@@ -30,6 +30,7 @@ Before analyzing the dataset, I checked for duplicates, nulls, and missing value
 16. How is the presence of a heart disease linked to gender and heart rate?
 
 ## Code
+The following is the prelimianry code. Go to the code file for the full query.
 ```sql
 ----------------------------------------------------------Data Cleaning--------------------------------------------------------------------
 ----------------------------------------------------Look for duplicates--------------------------------------------------------------------
