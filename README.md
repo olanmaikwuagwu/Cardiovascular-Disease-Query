@@ -34,7 +34,7 @@ Before analyzing the dataset, I checked for duplicates, nulls, and missing value
 16. How is the presence of a heart disease linked to gender and heart rate?
 
 ## Code
-The following is the prelimianry code. Go to the code file for the full query.
+The following is the preliminary code. Go to the code file for the full query.
 ```sql
 ----------------------------------------------------------Data Cleaning--------------------------------------------------------------------
 ----------------------------------------------------Look for duplicates--------------------------------------------------------------------
