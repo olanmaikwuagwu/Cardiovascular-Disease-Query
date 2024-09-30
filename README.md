@@ -19,7 +19,7 @@ Before analyzing the dataset, I checked for duplicates, nulls, and missing value
 5. What is the correlation between chestpain and heartrate?
 6. How is serum cholesterol distributed amongst patients?
 7. What percentage of the patients had high fasting sugar levels?
-8. What is the grouping of resting electrocardiogram among patients? (0 for, 1 for, 2 for)
+8. What is the grouping of resting electrocardiogram among patients? (0 for normal, 1 for ST-T wave abnormality, 2 for probable or definite left ventricular hypertrophy)
 9. What is the distribution of maximum heart rate by age?
 10. How many patients have exercise-induced angina?
 11. What is the percentage of patients with heart disease?
