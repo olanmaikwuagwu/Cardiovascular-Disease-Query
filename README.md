@@ -11,5 +11,23 @@ To complete the study, the following data analytics tools were utilized:
 3. Power BI - For visualization
 
 ## Methods and Questions
+Before analyzing the dataset, I checked for duplicates, nulls, and missing values. To a large extent, the raw data was clean and ready for querying. After getting the summary statistics, I answered the following questions during the exploratory data analysis:
+1. What age brackets are covered in the analysis?
+2. How many men and women made up the total count? (0 for , 1 for   )
+3. How were chest pain types distributed among the participants? (0, 1, 2, 3)
+4. What was the average resting blood pressure?
+5. What is the correlation between chestpain and heartrate?
+6. How is serum cholesterol distributed amongst patients?
+7. What percentage of the patients had high fasting sugar levels?
+8. What is the grouping of resting electrocardiogram among patients? (0 for, 1 for, 2 for)
+9. What is the distribution of maximum heart rate by age?
+10. How many patients have exercise-induced angina?
+11. What is the percentage of patients with heart disease?
+12. What is the average old peak among patients?
+13. What are the metrics for the oldest patient?
+14. What are the metrics for the patient with the lowest blood pressure?
+15. How many patients have defects in all of their blood vessels?
+16. How is the presence of a heart disease linked to gender and heart rate?
 
 ## Code
+--sql
